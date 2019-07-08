@@ -1,13 +1,44 @@
+" set colorscheme to codedark similar to vscode
 colorscheme codedark
+
+" enable syntax highlighting
 syntax enable
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
+
+" show line numbers
 set number
+
+" set tabs to have 4 spaces
+set tabstop=4
+
+" indent when moving to the next line while writing code
+set autoindent
+
+" expand tabs into spaces
+set expandtab
+
+" when using the >> or << commands, shift lines by 4 spaces
+set shiftwidth=4
+
+" show partial command line at last line
 set showcmd
+
+" highlight line cursor is on
 set cursorline
-set lazyredraw
+
+" shows matching parenthesis
 set showmatch
-highlight RedundantSpaces ctermbg=red guibg=red 
+
+" enable all Python syntax highlighting features
+let python_highlight_all = 1
+
+" shows trailing whitespace in red color
+highlight RedundantSpaces ctermbg=red guibg=red
 match RedundantSpaces /\s\+$/
+
+" seamless navigation between splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+
+set lazyredraw
