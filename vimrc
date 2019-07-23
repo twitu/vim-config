@@ -41,4 +41,10 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 
+" use ctags for understanding source code
+set tags=tags
+
+" visual select and replace
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
 set lazyredraw
