@@ -1,3 +1,6 @@
+" Add pathogen for package management
+execute pathogen#infect()
+
 " set colorscheme to codedark similar to vscode
 colorscheme codedark
 
@@ -46,5 +49,8 @@ set tags=tags
 
 " visual select and replace
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
+" start searching on character press
+set incsearch
 
 set lazyredraw
