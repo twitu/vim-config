@@ -1,6 +1,3 @@
-" Add pathogen for package management
-execute pathogen#infect()
-
 " set colorscheme to codedark similar to vscode
 colorscheme codedark
 

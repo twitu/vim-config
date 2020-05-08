@@ -1,19 +1,19 @@
 [submodule "pack/plasticboy/start/vim-markdown"]
-    path = pack/plasticboy/start/vim-markdown
-    url = https://github.com/plasticboy/vim-markdown.git
+	path = pack/plasticboy/start/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
 [submodule "pack/tomasiser/start/vim-code-dark"]
-    path = pack/tomasiser/start/vim-code-dark
-    url = https://github.com/tomasiser/vim-code-dark.git
+	path = pack/tomasiser/start/vim-code-dark
+	url = https://github.com/tomasiser/vim-code-dark.git
 [submodule "pack/jiangmiao/start/auto-pairs"]
-    path = pack/jiangmiao/start/auto-pairs
-    url = https://github.com/jiangmiao/auto-pairs.git
+	path = pack/jiangmiao/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
 [submodule "pack/tpope/start/vim-surround"]
-    path = pack/tpope/start/vim-surround
-    url = https://github.com/tpope/vim-surround.git
+	path = pack/tpope/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
 [submodule "pack/wakatime/start/vim-wakatime"]
-    path = pack/wakatime/start/vim-wakatime
-    url = https://github.com/wakatime/vim-wakatime.git
+	path = pack/wakatime/start/vim-wakatime
+	url = https://github.com/wakatime/vim-wakatime.git
 [submodule "pack/christoomey/start/vim-tmux-navigator"]
-    path = pack/christoomey/start/vim-tmux-navigator
-    url = https://github.com/christoomey/vim-tmux-navigator
+	path = pack/christoomey/start/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator
 
