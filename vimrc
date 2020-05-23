@@ -28,6 +28,9 @@ set cursorline
 " shows matching parenthesis
 set showmatch
 
+" show the title of the file you are editing.
+set title
+
 " enable all Python syntax highlighting features
 let python_highlight_all = 1
 
@@ -82,4 +85,10 @@ if has('persistent_undo')      "check if your vim version supports it
 endif
 
 set lazyredraw
+
+" Going to the end and the beginning of a line
+nnoremap B ^
+nnoremap E $
+nnoremap $ <nop>
+nnoremap ^ <nop>
 
