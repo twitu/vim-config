@@ -92,3 +92,6 @@ nnoremap E $
 nnoremap $ <nop>
 nnoremap ^ <nop>
 
+" Default copy to global clipboard
+set clipboard=unnamedplus
+
