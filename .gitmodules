@@ -1,3 +1,18 @@
+[submodule "pack/gruvbox/start/gruvbox"]
+	path = pack/gruvbox/start/gruvbox
+	url = https://github.com/gruvbox-community/gruvbox
+[submodule "pack/neovimhaskell/start/haskell-vim"]
+	path = pack/neovimhaskell/start/haskell-vim
+	url = https://github.com/neovimhaskell/haskell-vim
+[submodule "pack/sbdchd/start/neoformat"]
+	path = pack/sbdchd/start/neoformat
+	url = https://github.com/neovimhaskell/haskell-vim
+[submodule "pack/vim-airline/start/vim-airline"]
+	path = pack/vim-airline/start/vim-airline
+	url = https://github.com/neovimhaskell/haskell-vim
+[submodule "pack/vim-airline/start/vim-airline-themes"]
+	path = pack/vim-airline/start/vim-airline-themes
+	url = https://github.com/neovimhaskell/haskell-vim
 [submodule "pack/plasticboy/start/vim-markdown"]
 	path = pack/plasticboy/start/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
@@ -16,4 +31,3 @@
 [submodule "pack/christoomey/start/vim-tmux-navigator"]
 	path = pack/christoomey/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
-

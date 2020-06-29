@@ -1,5 +1,7 @@
-" set colorscheme to codedark similar to vscode
-colorscheme codedark
+" set colorscheme
+let g:airline_theme='gruvbox'
+colorscheme gruvbox
+set background=dark
 
 " enable syntax highlighting
 syntax enable
@@ -94,4 +96,35 @@ nnoremap ^ <nop>
 
 " Default copy to global clipboard
 set clipboard=unnamedplus
+
+" Spell check
+set spelllang=en_gb
+autocmd filetype markdown setlocal spell
+
+" set default folding
+set foldmethod=indent
+set nofoldenable
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Haskell configuration
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" refer to: https://www.jontysr.uk/setup/2019/12/16/haskell_vim.html
+" Using haskell-vim for syntax highlighting and indentation
+let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
+let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
+
+" Use neoformat plugin for formatting code with format on save
+" Use brittany as formatter
+let g:neoformat_enabled_haskell = ['brittany']
+
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
 
