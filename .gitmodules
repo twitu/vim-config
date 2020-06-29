@@ -31,3 +31,9 @@
 [submodule "pack/christoomey/start/vim-tmux-navigator"]
 	path = pack/christoomey/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
+[submodule "pack/airblade/start/vim-gitgutter"]
+	path = pack/airblade/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "pack/junegunn/start/fzf"]
+	path = pack/junegunn/start/fzf
+	url = https://github.com/junegunn/fzf.vim

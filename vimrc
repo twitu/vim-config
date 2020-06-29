@@ -105,6 +105,16 @@ autocmd filetype markdown setlocal spell
 set foldmethod=indent
 set nofoldenable
 
+" enable fzf
+set rtp+=~/.fzf
+
+" set format options to not put in comment header
+" when creating new line using 'o' or 'O'
+" Use :help fo-table to see options
+" Use autocmd because setting is overridden by plugins
+" https://vi.stackexchange.com/a/17739/30332
+au BufEnter * set fo-=o
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Haskell configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
