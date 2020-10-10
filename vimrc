@@ -107,6 +107,7 @@ set nofoldenable
 
 " enable fzf
 set rtp+=~/.fzf
+let g:fzf_command_prefix='Fzf'
 
 " set format options to not put in comment header
 " when creating new line using 'o' or 'O'
@@ -114,6 +115,20 @@ set rtp+=~/.fzf
 " Use autocmd because setting is overridden by plugins
 " https://vi.stackexchange.com/a/17739/30332
 au BufEnter * set fo-=o
+
+" Ctrl w behaves like Ctrl backspace in insert mode
+" Map Ctrl j for easier word delete
+" https://vi.stackexchange.com/a/7226/30332
+noremap! <C-j> <C-w>
+
+" Use tab and shift tab to cycle through suggestions
+" replacing Ctrl n and Ctrl p for the same
+inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+
+" Open hotkeys for Fzf commands
+map <C-p> :FzfFiles<CR>
+nmap <leader>; :FzfBuffers<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Haskell configuration
