@@ -4,11 +4,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
 
-" run PlugInstall if there are missing plugins
-if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
 " declare plugins
 call plug#begin('~/.vim/plugged')
 
@@ -79,6 +74,12 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 
+" Use alt + hjkl to resize windows
+nnoremap <M-j>    :resize -2<CR>
+nnoremap <M-k>    :resize +2<CR>
+nnoremap <M-h>    :vertical resize -2<CR>
+nnoremap <M-l>    :vertical resize +2<CR>0
+
 " use ctags for understanding source code
 set tags=tags
 
@@ -137,9 +138,6 @@ autocmd filetype markdown setlocal spell
 " set default folding
 set foldmethod=indent
 set nofoldenable
-
-" enable fzf
-set rtp+=~/.fzf
 
 " set format options to not put in comment header
 " when creating new line using 'o' or 'O'
