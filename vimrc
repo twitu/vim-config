@@ -1,3 +1,36 @@
+" install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+" run PlugInstall if there are missing plugins
+if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" declare plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'gruvbox-community/gruvbox' "vim theme
+Plug 'sbdchd/neoformat' "auto format code
+Plug 'neovimhaskell/haskell-vim' "Haskell syntax highlighting
+Plug 'vim-airline/vim-airline' "better status line
+Plug 'vim-airline/vim-airline-themes' "status line theme
+Plug 'godlygeek/tabular' "dependency for vim markdown
+Plug 'plasticboy/vim-markdown'  "markdown highlighting and mapping
+Plug 'jiangmiao/auto-pairs' "auto pair brackets
+Plug 'tpope/vim-surround' "easy bracket surround
+Plug 'wakatime/vim-wakatime' "track vim activity
+Plug 'christoomey/vim-tmux-navigator' "efficient tmux navigation
+Plug 'airblade/vim-gitgutter' "git change highlight
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "install fzf plugin and binary
+Plug 'junegunn/fzf.vim' "add fzf commands
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "language server for IDE features
+
+" initialize plugin system
+call plug#end()
+
 " set colorscheme
 let g:airline_theme='gruvbox'
 colorscheme gruvbox
@@ -107,7 +140,6 @@ set nofoldenable
 
 " enable fzf
 set rtp+=~/.fzf
-let g:fzf_command_prefix='Fzf'
 
 " set format options to not put in comment header
 " when creating new line using 'o' or 'O'
@@ -127,8 +159,8 @@ inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 
 " Open hotkeys for Fzf commands
-map <C-p> :FzfFiles<CR>
-nmap <leader>; :FzfBuffers<CR>
+map <C-p> :Files<CR>
+nmap <leader>; :Buffers<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Haskell configuration
